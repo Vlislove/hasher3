@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Vlad/CLionProjects/hasher3/src/functions.cpp
+cstring
+-
+functions.h
+C:/Users/Vlad/CLionProjects/hasher3/src/functions.h
+
+C:/Users/Vlad/CLionProjects/hasher3/src/functions.h
+iostream
+-
+vector
+-
+fstream
+-
+

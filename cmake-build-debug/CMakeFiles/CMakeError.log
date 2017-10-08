@@ -1,0 +1,58 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: C:/Users/Vlad/CLionProjects/hasher3/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_171cf/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_171cf.dir\build.make CMakeFiles/cmTC_171cf.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Vlad/CLionProjects/hasher3/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_171cf.dir/CheckSymbolExists.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_171cf.dir\CheckSymbolExists.c.obj   -c C:\Users\Vlad\CLionProjects\hasher3\cmake-build-debug\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+Linking C executable cmTC_171cf.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_171cf.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_171cf.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_171cf.dir/objects.a @CMakeFiles\cmTC_171cf.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_171cf.dir/objects.a -Wl,--no-whole-archive  -o cmTC_171cf.exe -Wl,--out-implib,libcmTC_171cf.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_171cf.dir\linklibs.rsp
+CMakeFiles\cmTC_171cf.dir/objects.a(CheckSymbolExists.c.obj):CheckSymbolExists.c:(.text+0x12): undefined reference to `pthread_create'
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_171cf.dir\build.make:98: recipe for target 'cmTC_171cf.exe' failed
+mingw32-make.exe[1]: *** [cmTC_171cf.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Vlad/CLionProjects/hasher3/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_171cf/fast' failed
+mingw32-make.exe: *** [cmTC_171cf/fast] Error 2
+
+File C:/Users/Vlad/CLionProjects/hasher3/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Users/Vlad/CLionProjects/hasher3/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_189b3/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_189b3.dir\build.make CMakeFiles/cmTC_189b3.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Vlad/CLionProjects/hasher3/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_189b3.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles\cmTC_189b3.dir\CheckFunctionExists.c.obj   -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_189b3.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_189b3.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_189b3.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_189b3.dir/objects.a @CMakeFiles\cmTC_189b3.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create    -Wl,--whole-archive CMakeFiles\cmTC_189b3.dir/objects.a -Wl,--no-whole-archive  -o cmTC_189b3.exe -Wl,--out-implib,libcmTC_189b3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_189b3.dir\linklibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/5.3.0/../../../../mingw32/bin/ld.exe: cannot find -lpthreads
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles\cmTC_189b3.dir\build.make:98: recipe for target 'cmTC_189b3.exe' failed
+mingw32-make.exe[1]: *** [cmTC_189b3.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Vlad/CLionProjects/hasher3/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_189b3/fast' failed
+mingw32-make.exe: *** [cmTC_189b3/fast] Error 2
+
+

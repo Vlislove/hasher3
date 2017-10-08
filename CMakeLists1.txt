@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.8)
+project(hasher3)
+
+#Library
+add_library(hasherlib
+        src/functions.cpp
+        src/functions.h)
+set_target_properties(hasherlib PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED YES
+        CXX_EXTENSIONS NO)
+
+#Hasher
+add_executable(hasher3
+        src/main.cpp)
+
+add_dependencies(hasher3 hasherlib)
+
+set_target_properties(hasherlib PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED YES
+        CXX_EXTENSIONS NO)
+
+target_link_libraries(hasher3 hasherlib)
